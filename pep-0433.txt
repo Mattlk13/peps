@@ -2,11 +2,11 @@ PEP: 433
 Title: Easier suppression of file descriptor inheritance
 Version: $Revision$
 Last-Modified: $Date$
-Author: Victor Stinner <vstinner@redhat.com>
+Author: Victor Stinner <vstinner@python.org>
 Status: Superseded
 Type: Standards Track
 Content-Type: text/x-rst
-Created: 10-January-2013
+Created: 10-Jan-2013
 Python-Version: 3.4
 Superseded-By: 446
 

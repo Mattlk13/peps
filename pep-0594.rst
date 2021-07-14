@@ -18,7 +18,7 @@ and SUN file formats), APIs and operating systems that have been superseded a
 long time ago (e.g. Mac OS 9), or modules that have security implications and
 better alternatives (e.g. password and login).
 
-The PEP follows in the foot steps of other PEPS like :pep:`3818`. The
+The PEP follows in the foot steps of other PEPS like :pep:`3108`. The
 *Standard Library Reorganization* proposal removed a bunch of modules from
 Python 3.0. In 2007, the PEP referred to maintenance burden as:
 
@@ -61,7 +61,7 @@ for several reasons.
   development team. The team has limited resources, reduced maintenance cost
   frees development time for other improvements.
 * Modules in the standard library are generally favored and seen as the
-  de-facto solution for a problem. A majority of users only pick third-party
+  de facto solution for a problem. A majority of users only pick third-party
   modules to replace a stdlib module, when they have a compelling reason, e.g.
   ``lxml`` instead of ``xml``. The removal of an unmaintained stdlib module
   increases the chances of a community-contributed module to become widely
@@ -86,7 +86,7 @@ an option. This can be corporate environments or classrooms where external
 code is not permitted without legal approval.
 
 * The usage of FTP is declining, but some files are still provided over
-  the FTP protocol or hosters offer FTP to upload content. Therefore
+  the FTP protocol or hosters offer FTP to upload content. Therefore,
   ``ftplib`` is going to stay.
 * The ``optparse`` and ``getopt`` modules are widely used. They are mature
   modules with very low maintenance overhead.
@@ -168,39 +168,55 @@ audio processing.
    :widths: 2, 1, 1, 1, 1, 2
 
     aifc,3.8 (3.0\*),3.10,1993,**yes (inactive)**,\-
-    asynchat,**3.6** (3.0\*),3.10,1999,**yes**,asyncio
-    asyncore,**3.6** (3.0\*),3.10,1999,**yes**,asyncio
+    asynchat,**3.6** (3.0\*),3.10,1999,**yes**,asyncio_
+    asyncore,**3.6** (3.0\*),3.10,1999,**yes**,asyncio_
     audioop,3.8 (3.0\*),3.10,1992,**yes**,\-
     binhex,3.8,3.10,1995,no,\-
     cgi,3.8 (2.0\*\*),3.10,1995,no,\-
     cgitb,3.8 (2.0\*\*),3.10,1995,no,\-
     chunk,3.8,3.10,1999,no,\-
-    crypt,3.8,3.10,1994,**yes (inactive)**,"legacycrypt, bcrypt, argon2cffi, hashlib, passlib"
-    email.message.Message,3.3,3.10,2001,yes,email.message.EmailMessage
-    email.mime,3.3,3.10,2001,yes,email.contentmanager
-    email.policy.Compat32,3.3,3.10,2011,yes,email.policy.EmailPolicy
+    crypt,3.8,3.10,1994,**yes (inactive)**,"legacycrypt_, bcrypt_, argon2cffi_, hashlib_, passlib_"
     formatter,**3.4**,3.10,1995,no,\-
     fpectl,**3.7**,**3.7**,1997,n/a,\-
-    imghdr,3.8,3.10,1992,no,"filetype, puremagic, python-magic"
-    imp,**3.4**,3.10,1990/1995,no,importlib
+    imghdr,3.8,3.10,1992,no,"filetype_, puremagic_, python-magic_"
+    imp,**3.4**,3.10,1990/1995,no,importlib_
     macpath,**3.7**,**3.8**,1990,n/a,\-
     msilib,3.8,3.10,2006,no,\-
     nntplib,3.8,3.10,1992,no,\-
     nis,3.8 (3.0\*),3.10,1992,no,\-
     ossaudiodev,3.8,3.10,2002,no,\-
-    parser,**2.5**,**3.9**,1993,**yes**,"ast, lib2to3.pgen2"
-    pipes,3.8,3.10,1992,no,subprocess
-    smtpd,"**3.4.7**, **3.5.4**",3.10,2001,**yes**,aiosmtpd
-    sndhdr,3.8,3.10,1994,no,"filetype, puremagic, python-magic"
-    spwd,3.8,3.10,2005,no,"python-pam, simplepam"
+    parser,**2.5**,**3.9**,1993,**yes**,"ast_, astroid_, lib2to3.pgen2"
+    pipes,3.8,3.10,1992,no,"subprocess_"
+    smtpd,"**3.4.7**, **3.5.4**",3.10,2001,**yes**,"aiosmtpd_"
+    sndhdr,3.8,3.10,1994,no,"filetype_, puremagic_, python-magic_"
+    spwd,3.8,3.10,2005,no,"python-pam_, simplepam_"
     sunau,3.8 (3.0\*),3.10,1993,no,\-
-    telnetlib,3.8 (3.0\*),3.10,1997,no,"telnetlib3, Exscript"
+    telnetlib,3.8 (3.0\*),3.10,1997,no,"telnetlib3_, Exscript_"
     uu,3.8,3.10,1994,no,\-
     xdrlib,3.8,3.10,1992/1996,no,\-
 
+.. _aiosmtpd: https://pypi.org/project/aiosmtpd/
+.. _argon2cffi: https://pypi.org/project/argon2-cffi/
+.. _ast: https://docs.python.org/3/library/ast.html
+.. _astroid: https://pypi.org/project/astroid/
+.. _asyncio: https://docs.python.org/3/library/hashlib.html
+.. _bcrypt: https://pypi.org/project/bcrypt/
+.. _Exscript: https://pypi.org/project/Exscript/
+.. _filetype: https://pypi.org/project/filetype/
+.. _hashlib: https://docs.python.org/3/library/hashlib.html
+.. _importlib: https://docs.python.org/3/library/importlib.html
+.. _legacycrypt: https://pypi.org/project/legacycrypt/
+.. _passlib: https://pypi.org/project/passlib/
+.. _puremagic: https://pypi.org/project/puremagic/
+.. _python-magic: https://pypi.org/project/python-magic/
+.. _python-pam: https://pypi.org/project/python-pam/
+.. _simplepam: https://pypi.org/project/simplepam/
+.. _subprocess: https://docs.python.org/3/library/subprocess.html
+.. _telnetlib3: https://pypi.org/project/telnetlib3/
+
 Some module deprecations proposed by :pep:`3108` for 3.0 and :pep:`206` for
 2.0. The *added in* column illustrates, when a module was originally designed
-and added to the standard library. The *has maintainer* colum refers to the
+and added to the standard library. The *has maintainer* column refers to the
 `expert index <https://devguide.python.org/experts/>`_, a list of domain
 experts and maintainers in the DevGuide.
 
@@ -227,13 +243,14 @@ Has a designated expert
 Substitute
   **none**
 
-uu
-~~
+uu and the uu encoding
+~~~~~~~~~~~~~~~~~~~~~~
 
 The `uu <https://docs.python.org/3/library/uu.html>`_ module provides
 uuencode format, an old binary encoding format for email from 1980. The uu
 format has been replaced by MIME. The uu codec is provided by the ``binascii``
-module.
+module.  There's also ``encodings/uu_codec.py`` which is a codec for the
+same encoding; it should also be deprecated.
 
 Module type
   pure Python
@@ -529,39 +546,6 @@ Has a designated expert
 Substitute
   **none**
 
-email (legacy API)
-~~~~~~~~~~~~~~~~~~
-
-The `email <https://docs.python.org/3/library/email.html>`_ package is a
-library for managing email messages. The email package contains several
-legacy modules, legacy functions, and legacy classes, that provide backwards
-compatibility to Python 3.2 and 2.7:
-
- * ``email.message.Message`` (replaced by ``email.message.EmailMessage``)
- * ``email.mime`` (replaced by ``email.contentmanager``)
- * ``email.header`` (replaced by dict-like API of ``EmailMessage`` class)
- * ``email.charset``
- * ``email.encoders`` (replaced by ``EmailMessage.set_content``)
- * ``email.utils`` (new API performs parsing and formatting automatically)
- * ``email.iterators``
- * ``email.policy.Compat32``
-
-The classes ``email.mime.audio.MIMEAudio`` and ``email.mime.image.MIMEImage``
-depend on the ``sndhdr`` and ``imghdr`` modules. In case the ``email.mime``
-package is not removed, the auto-detection of file formats must be deprecated
-and ``_subtype`` argument a required argument.
-
-Module type
-  pure Python
-Deprecated in
-  3.8 (documented as legacy APIs since 3.3 or 3.4)
-To be removed in
-  3.10
-Has a designated expert
-   yes
-Substitute
-  email (non-legacy APIs)
-
 smtpd
 ~~~~~
 
@@ -624,8 +608,8 @@ Deprecated in
 To be removed in
   3.10
 Substitute
-  `telnetlib3 <https://pypi.org/project/telnetlib3>`_,
-  `Exscript <https://pypi.org/project/Exscript/>`_
+  telnetlib3_,
+  Exscript_
 
 
 Operating system interface
@@ -941,7 +925,7 @@ The `lib2to3 <https://docs.python.org/3/library/2to3.html>`_ package provides
 the ``2to3`` command to transpile Python 2 code to Python 3 code.
 
 The package is useful for other tasks besides porting code from Python 2 to
-3. For example `Black`_ uses it for code reformatting.
+3. For example, `Black`_ uses it for code reformatting.
 
 Module type
   pure Python
@@ -1010,7 +994,7 @@ Future maintenance of removed modules
 =====================================
 
 The main goal of the PEP is to reduce the burden and workload on the Python
-core developer team. Therefore removed modules will not be maintained by
+core developer team. Therefore, removed modules will not be maintained by
 the core team as separate PyPI packages. However the removed code, tests and
 documentation may be moved into a new Git repository, so community members
 have a place from which they can pick up and fork code.
@@ -1022,7 +1006,7 @@ the packages. It is my hope that members of the Python community will
 adopt, maintain, and perhaps improve the deprecated modules.
 
 It's my hope that some of the deprecated modules will be picked up and
-adopted by users that actually care about them. For example ``colorsys`` and
+adopted by users that actually care about them. For example, ``colorsys`` and
 ``imghdr`` are useful modules, but have limited feature set. A fork of
 ``imghdr`` can add new features and support for more image formats, without
 being constrained by Python's release cycle.
@@ -1031,7 +1015,7 @@ Most of the modules are in pure Python and can be easily packaged. Some
 depend on a simple C module, e.g. `audioop`_ and `crypt`_. Since `audioop`_
 does not depend on any external libraries, it can be shipped as binary
 wheels with some effort. Other C modules can be replaced with ``ctypes`` or ``cffi``.
-For example I created `legacycrypt`_, which provides a full implementation of
+For example, I created `legacycrypt`_, which provides a full implementation of
 ``crypt``. It is implemented on top of a ctypes wrapper around ``libxcrypt``
 and ``libcrypt`` instead of a C extension like the original ``_crypt``
 module.
@@ -1089,6 +1073,11 @@ Update 2
 * Add creation year to overview table
 * Mention :pep:`206` and :pep:`3108`
 * Update sections for ``aifc``, ``audioop``, ``cgi``, and ``wave``.
+
+Update 3
+--------
+* Keep the legacy email API modules.  Internal deprecations will be
+  handled separately.
 
 
 References

@@ -559,7 +559,7 @@ nested function must be recomputed each time the nested function is
 defined.  For certain "functional" styles of programming this may make
 switch unattractive in nested functions.  (Unless all case expressions
 are compile-time constants; then the compiler is of course free to
-optimize away the swich freezing code and make the dispatch table part
+optimize away the switch freezing code and make the dispatch table part
 of the code object.)
 
 Another downside is that under this option, there's no clear moment
@@ -615,7 +615,7 @@ Conclusion
 ==========
 
 It is too early to decide.  I'd like to see at least one completed
-proposal for pre-computed values before deciding.  In the mean time,
+proposal for pre-computed values before deciding.  In the meantime,
 Python is fine without a switch statement, and perhaps those who claim
 it would be a mistake to add one are right.
 

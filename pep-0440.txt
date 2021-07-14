@@ -9,7 +9,7 @@ Discussions-To: Distutils SIG <distutils-sig@python.org>
 Status: Active
 Type: Informational
 Content-Type: text/x-rst
-Created: 18 Mar 2013
+Created: 18-Mar-2013
 Post-History: 30 Mar 2013, 27 May 2013, 20 Jun 2013,
               21 Dec 2013, 28 Jan 2014, 08 Aug 2014
               22 Aug 2014
@@ -251,11 +251,11 @@ part of the ``3.3`` release series.
 Date based release segments are also permitted. An example of a date based
 release scheme using the year and month of the release::
 
-    2012.04
-    2012.07
+    2012.4
+    2012.7
     2012.10
-    2013.01
-    2013.06
+    2013.1
+    2013.6
     ...
 
 
@@ -745,7 +745,7 @@ it covers many of the issues that can arise when depending on other
 distributions, and when publishing a distribution that others rely on.
 
 The "Major.Minor.Patch" (described in this PEP as "major.minor.micro")
-aspects of semantic versioning (clauses 1-9 in the 2.0.0-rc-1 specification)
+aspects of semantic versioning (clauses 1-8 in the 2.0.0 specification)
 are fully compatible with the version scheme defined in this PEP, and abiding
 by these aspects is encouraged.
 

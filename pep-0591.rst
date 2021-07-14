@@ -129,7 +129,7 @@ variable or attribute should not be reassigned, redefined, or overridden.
 Syntax
 ~~~~~~
 
-``Final`` may be used in in one of several forms:
+``Final`` may be used in one of several forms:
 
 * With an explicit type, using the syntax ``Final[<type>]``. Example::
 
@@ -243,7 +243,7 @@ following should be allowed::
 Reference Implementation
 ========================
 
-The mypy [#mypy]_ type checker supports `Final` and `final`. A
+The mypy [#mypy]_ type checker supports ``Final`` and ``final``. A
 reference implementation of the runtime component is provided in the
 ``typing_extensions`` [#typing_extensions]_ module.
 

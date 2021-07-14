@@ -2,11 +2,11 @@ PEP: 418
 Title: Add monotonic time, performance counter, and process time functions
 Version: $Revision$
 Last-Modified: $Date$
-Author: Cameron Simpson <cs@cskk.id.au>, Jim Jewett <jimjjewett@gmail.com>, Stephen J. Turnbull <stephen@xemacs.org>, Victor Stinner <vstinner@redhat.com>
+Author: Cameron Simpson <cs@cskk.id.au>, Jim Jewett <jimjjewett@gmail.com>, Stephen J. Turnbull <stephen@xemacs.org>, Victor Stinner <vstinner@python.org>
 Status: Final
 Type: Standards Track
 Content-Type: text/x-rst
-Created: 26-March-2012
+Created: 26-Mar-2012
 Python-Version: 3.3
 
 
